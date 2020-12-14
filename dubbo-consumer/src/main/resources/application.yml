@@ -1,0 +1,15 @@
+server:
+  port: 8082
+#配置从哪里取服务
+dubbo:
+ #配置远程注册中心信息
+ registry:
+  protocol: zookeeper
+  address: 192.168.96.123:2181
+ #配置自己的信息
+ application:
+  name: dubboConsumber
+
+spring:
+  application:
+    name: userCosumber
