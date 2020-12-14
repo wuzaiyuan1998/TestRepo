@@ -1,0 +1,24 @@
+#配置端口号server:
+server:
+  port: 8081
+#数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/db1?serverTimezone=GMT
+    username: root
+    password: root
+  application:
+    name: UserServiceProvider
+#配置注册中心  dubbo.registry.protocol=zookeeper  dubbo.registry.address=192.168.1.112:2181
+dubbo:
+ #配置远程注册中心信息
+ registry:
+  protocol: zookeeper
+  address: 192.168.96.123:2181
+ #配置自己的信息
+ protocol:
+  name: dubbo
+  port: 10086
+ application:
+  name: dubboProvider
